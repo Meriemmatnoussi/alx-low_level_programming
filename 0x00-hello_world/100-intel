@@ -1,0 +1,2 @@
+#!/bin/bash
+CFILE=$1 | gcc -S -masm=intel $CFILE | ASMFILE=$(basename $CFILE .c).s | mv ${CFILE%.*}.s $ASMFILE
