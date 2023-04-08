@@ -6,5 +6,3 @@ gcc -c *.c
 # Create static library using all object files
 ar rcs liball.a *.o
 
-# Remove object files
-rm *.o
