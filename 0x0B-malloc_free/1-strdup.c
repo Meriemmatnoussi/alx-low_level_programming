@@ -1,26 +1,30 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
- *_strdup - function returns a pointer to a new string
- *
+ * *_strdup- converts ato ager
  *@str: string of chars
- *
- *Return: (copy_str) or (NULL)
+ *Return: On success, a pointer to a newly allocated memory block containing
+ *a copy of the input string. On failure, NULL.
  */
 
 char *_strdup(char *str)
 {
-char *copy_str =(char*) malloc(10);
+	char *cp_str;
+	int i;
+	int j;
 
-	if (str == NULL || copy_str == NULL)
+	if (str == NULL)
 	{
-	return (NULL);
+	return (0);
 	}
-	else
+	for (i = 0; str[i] != '\0'; i++)
 	{
-	strcpy(copy_str, str);
-	return (copy_str);
 	}
+	cp_str = malloc((i + 1) * sizeof(char));
+
+	for (j = 0; j <= i; j++)
+	{
+	cp_str[j] = str[j];
+	}
+return (cp_str);
 }
